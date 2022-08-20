@@ -1,0 +1,11 @@
+.imglistitem{
+    
+}
+
+/* smaller screen */
+ @media screen and (max-width: 576px){
+    .imglistItem{
+        margin: auto;
+    }
+ }
+ 

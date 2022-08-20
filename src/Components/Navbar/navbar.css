@@ -1,0 +1,152 @@
+
+
+
+.link{
+    /* arrange links in a row */
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+.links{
+    display: flex;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500;
+    white-space: nowrap;
+    margin: 0.5em;
+}
+.slinks{
+    color: #000;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.links:hover{
+    opacity: .6;
+    transition: all ease-in-out 1s;
+}
+
+*{
+padding: 0;
+margin: 0;
+}
+.brand{
+    margin-left: 100px;
+    color: #fff;
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        letter-spacing: 1px;
+}
+
+
+.banner{
+    min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../../public/Images/backi.jpg") center/cover no-repeat fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
+}
+.banner-title{
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+
+}
+.banner-title span{
+    font-family: 'Playfair Display', serif;
+    color: rgba(0, 0, 0, 0.787);
+
+}
+.banner p{
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    word-spacing: 2px;
+}
+.banner form{
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    /* reduce width and align to center */
+    width: 75%;
+    margin: 0 auto;
+
+}
+.search-input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: 0;
+    padding: 0.6rem 0;
+    border: none;
+}
+.search-input::placeholder{
+    text-transform: capitalize;
+}
+.search-btn{
+    width: 40px;
+    font-size: 1.1rem;
+    border: none;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+    color: black;
+}
+.articles{
+    background-color: #fff;
+    color: #000;
+}
+.title{
+    text-align: center;
+        padding: 1rem 0;
+}
+.title h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: rgba(0, 0, 0, 0.787);
+}
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+
+
+/* on large screens */
+@media screen and (min-width: 768px){
+    .menu{
+        display: none;
+    }
+}
+/* on small screens */
+@media screen and (max-width: 768px){
+    .menu{
+        display: block;
+    }
+    .links{
+        display: none;
+    }
+    .banner-title{
+        font-size: 3rem;
+    }
+}

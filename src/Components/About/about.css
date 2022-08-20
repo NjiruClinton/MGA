@@ -1,0 +1,85 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.787);
+}
+.left{
+    background-color:  rgba(0, 0, 0, 0.787);
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left h1{
+    font-size: 3.1rem;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+.left p{
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    opacity: 0.8;
+}
+.left .p1 p{
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    opacity: 0.8;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.right{
+    display: flex;
+    width: 25%;
+    font-size: 30px;
+}
+.right img{
+    opacity: 0.8;
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+}
+/* on hover img */
+.right img:hover{
+    opacity: 1;
+    transition: all ease-in-out .5s;
+}
+/* on small screens */
+@media screen and (max-width: 768px){
+    .about{
+        flex-direction: column;
+    }
+    .left{
+        margin-top: 70px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .left h1{
+        font-size: 2.5rem;
+    }
+    .left p{
+        font-size: 1rem;
+    }
+    .left .p1 p{
+        font-size: 1rem;
+        margin: 1rem 0;
+    }
+    .right{
+        display: flex;
+        width: 100%;
+        font-size: 30px;
+    }
+    .right img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
