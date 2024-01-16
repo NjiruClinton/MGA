@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -10,6 +10,35 @@ import ReadMoreIcon from '@mui/icons-material/ReadMore';
 
 
 export default function TitlebarImageList() {
+
+  // fetch from http://localhost:8000/get_blogs/
+  console.log("starting... ")
+
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:8000/get_blogs/', {
+        method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        body: JSON.stringify({
+          "blog_id": 7
+        })
+    }
+    })
+        .then(res => {
+          return res.json();
+        })
+        .then(data => {
+          console.log('data here: ', data);
+          setBlogs(data);
+        })
+
+  }, []);
+
+    console.log(blogs);
+
   return (
     <ImageList sx={{ width: '100%', height: '100%' }}>
       <ImageListItem key="Subheader" cols={2}>
@@ -55,6 +84,12 @@ export default function TitlebarImageList() {
     </ImageList>
   );
 }
+
+
+
+
+
+
 
 const itemData = [
   {
